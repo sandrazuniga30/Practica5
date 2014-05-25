@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Practica_5
+{
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
+	{
+		int s=0;
+		public MainForm()
+		{
+			
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			
+			//
+			// TODO: Add constructor code after the InitializeComponent() call.
+			//
+		}
+		
+		void TextBox1TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			s=0;
+			if(	this.res1.Checked){
+				s+=1;
+			}
+			if(this.res2.Checked){
+				s+=1;
+			}
+			if(this.res3.Checked){
+				s+=1;
+			}
+			if(this.res4.Text=="31"){
+				s+=1;
+			}
+			if(this.res5.SelectionStart.Date.ToShortDateString() == "16/09/1810"){
+				s+=1;
+				
+			}
+			MessageBox.Show("Tu resultado es:" +s);
+			
+		}
+		
+		void RadioButton1CheckedChanged(object sender, EventArgs e)
+		{
+			
+		}
+	}
+}
